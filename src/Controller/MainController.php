@@ -12,7 +12,7 @@ class MainController extends AbstractController
     /**
      * Controleur de la page d'accueil
      */
-    #[Route('/', name: 'app_home')]
+    #[Route('/', name: 'main_home')]
     public function home(): Response
     {
         return $this->render('main/home.html.twig');

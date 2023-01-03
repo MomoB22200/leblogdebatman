@@ -1,9 +1,29 @@
+{#  utilisation du squelette de la page base.html.twig#}
 {% extends 'base.html.twig' %}
 
+{# titre de la page #}
 {% block title %}Accueil{% endblock %}
 
+{# contelu de la page #}
 {% block body %}
+    {# grille bootstrap #}
+    <div class="container-fluid">
 
-    <h1>Accueil</h1>
+        {# titre h1 de la page #}
+        <div class="row">
+            <h1 class="col-12 text-center my-5">Le Blog de Batman</h1>
+        </div>
 
+        {# contenu lorem #}
+        <div class="row">
+
+            <h2 class="text-center co-12 my-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+
+
+
+            <p class="class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque est necessitatibus nemo odio soluta? Accusamus aperiam beatae deserunt dolores, enim et labore laborum libero nostrum odio pariatur, provident voluptas? Ab animi architecto beatae, culpa debitis dignissimos eligendi, facilis maxime molestiae numquam provident quis repellat sapiente sit soluta velit vero vitae voluptatem? Atque deserunt, ea error esse exercitationem impedit in necessitatibus, nesciunt nulla optio possimus quasi quisquam repellendus repudiandae sunt tempore voluptate. At facere, id laudantium, maiores nam nihil nostrum nulla pariatur perspiciatis quos reprehenderit, sint. Accusamus ad atque labore modi provident quae quod sapiente totam! A aspernatur aut cum distinctio dolore doloremque, ea est, eum excepturi explicabo id ipsa ipsum labore laboriosam magni minima nostrum nulla officiis placeat provident quis quisquam, reprehenderit similique sit soluta tempore veritatis. Adipisci aliquid animi aperiam beatae blanditiis earum, eum explicabo harum hic illo laboriosam magni minus nam nihil optio possimus quae quas sapiente suscipit tempora tempore vel voluptas voluptatum. A aliquid culpa cum expedita id impedit libero maiores nemo nesciunt nihil odio, perferendis quas quibusdam repellat soluta vel voluptates? A delectus exercitationem id impedit magni mollitia nostrum provident quidem quo tenetur? At blanditiis ducimus facilis quas tempora. Ad adipisci aliquid assumenda atque beatae commodi cum dolor eaque eius eum fuga iste, iure laboriosam laudantium minus, molestiae natus nemo nihil, non optio placeat praesentium quaerat quo reiciendis repellendus repudiandae temporibus vitae. Accusantium animi consectetur cum delectus ea eum facere fugit labore magni necessitatibus numquam, praesentium recusandae vitae? Deleniti eius laudantium obcaecati, suscipit totam voluptatum?</p>
+        </div>
+        {# afficher image fixe en bandeau #}
+        <div class="row my-5 batman-cover"></div>
+    </div>
 {% endblock %}
