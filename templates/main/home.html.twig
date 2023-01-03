@@ -1,29 +1,32 @@
-{#  utilisation du squelette de la page base.html.twig#}
-{% extends 'base.html.twig' %}
+{# Utilisation du squelette de page base.html.twig #}
+{% extends "base.html.twig" %}
 
-{# titre de la page #}
+{# Titre de la page #}
 {% block title %}Accueil{% endblock %}
 
-{# contelu de la page #}
+{# Contenu de la page #}
 {% block body %}
-    {# grille bootstrap #}
+
+    {# Grille Bootstrap #}
     <div class="container-fluid">
 
-        {# titre h1 de la page #}
+        {# Titre h1 de la page #}
         <div class="row">
             <h1 class="col-12 text-center my-5">Le Blog de Batman</h1>
         </div>
 
-        {# contenu lorem #}
+        {# Contenu lorem #}
         <div class="row">
 
-            <h2 class="text-center co-12 my-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+            <h2 class="text-center col-12 my-4">Lorem ipsum dolor sit amet, consectetur.</h2>
 
+            <p class="col-12 col-md-10 mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci aliquid aperiam beatae blanditiis debitis delectus, et eum incidunt ipsam iste iusto laudantium minima perferendis quas quasi quia ratione recusandae reiciendis rerum tempore tenetur voluptatibus! Ad architecto asperiores at, consectetur deserunt eligendi error id incidunt, libero nihil porro soluta voluptatibus?</p>
 
-
-            <p class="class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque est necessitatibus nemo odio soluta? Accusamus aperiam beatae deserunt dolores, enim et labore laborum libero nostrum odio pariatur, provident voluptas? Ab animi architecto beatae, culpa debitis dignissimos eligendi, facilis maxime molestiae numquam provident quis repellat sapiente sit soluta velit vero vitae voluptatem? Atque deserunt, ea error esse exercitationem impedit in necessitatibus, nesciunt nulla optio possimus quasi quisquam repellendus repudiandae sunt tempore voluptate. At facere, id laudantium, maiores nam nihil nostrum nulla pariatur perspiciatis quos reprehenderit, sint. Accusamus ad atque labore modi provident quae quod sapiente totam! A aspernatur aut cum distinctio dolore doloremque, ea est, eum excepturi explicabo id ipsa ipsum labore laboriosam magni minima nostrum nulla officiis placeat provident quis quisquam, reprehenderit similique sit soluta tempore veritatis. Adipisci aliquid animi aperiam beatae blanditiis earum, eum explicabo harum hic illo laboriosam magni minus nam nihil optio possimus quae quas sapiente suscipit tempora tempore vel voluptas voluptatum. A aliquid culpa cum expedita id impedit libero maiores nemo nesciunt nihil odio, perferendis quas quibusdam repellat soluta vel voluptates? A delectus exercitationem id impedit magni mollitia nostrum provident quidem quo tenetur? At blanditiis ducimus facilis quas tempora. Ad adipisci aliquid assumenda atque beatae commodi cum dolor eaque eius eum fuga iste, iure laboriosam laudantium minus, molestiae natus nemo nihil, non optio placeat praesentium quaerat quo reiciendis repellendus repudiandae temporibus vitae. Accusantium animi consectetur cum delectus ea eum facere fugit labore magni necessitatibus numquam, praesentium recusandae vitae? Deleniti eius laudantium obcaecati, suscipit totam voluptatum?</p>
         </div>
-        {# afficher image fixe en bandeau #}
+
+        {# Affichage de l'image fixe en bandeau #}
         <div class="row my-5 batman-cover"></div>
+
     </div>
+
 {% endblock %}
