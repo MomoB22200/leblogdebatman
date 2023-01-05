@@ -1,4 +1,7 @@
 twig:
+    # activation du theme bootstrap 5 pour les formulaire généré par symfony du site
+    form_themes: ['bootstrap_5_layout.html.twig']
+
     default_path: '%kernel.project_dir%/templates'
 
 when@test:
