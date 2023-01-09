@@ -25,12 +25,42 @@
                     </a>
                 </li>
 
+                {# Menu déroulant #}
+                <li class="nav-item dropdown">
+
+                    {# Texte du bouton du menu déroulant #}
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-newspaper me-1"></i>Blog
+                    </a>
+
+                    {# Liste des boutons du menu déroulant #}
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        {# Bouton de la page qui liste tous les articles #}
+                        <li><a class="dropdown-item" href="xxxxxxxxxxxxxx">Publications</a></li>
+
+                        {# ouverture language twig + affichage des bouton reservé au administrateurs #}
+                        {% if is_granted('ROLE_ADMIN') %}
+
+                            {# Séparateur #}
+                            <li><hr class="dropdown-divider"></li>
+
+                            {# Bouton de la page pour créer un nouvel article #}
+                            <li><a class="dropdown-item" href="{{ path('blog_new_publication') }}">Nouvelle Publication</a></li>
+
+                        {#  fermeture language twig#}
+                        {% endif %}
+
+                    </ul>
+
+                </li>
+
             </ul>
 
             {# Paquet des boutons de droite #}
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-                {# Affichage des liens réservés aux utilisateurs connectés #}
+                {# Affichage des liens réservés aux utilisateurs connectés dans une balise twig#}
                 {% if app.user %}
 
                     {# Menu déroulant #}
@@ -58,7 +88,7 @@
 
                     </li>
 
-                    {# Affichage des liens réservés aux utilisateurs non connectés #}
+                {# Affichage des liens réservés aux utilisateurs non connectés (balise twig) #}
                 {% else %}
 
                     {# Lien de la page d'inscription #}
@@ -75,6 +105,7 @@
                         </a>
                     </li>
 
+                {# fermeture language twig #}
                 {% endif %}
 
             </ul>
