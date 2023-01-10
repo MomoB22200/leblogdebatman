@@ -53,7 +53,10 @@ class BlogController extends AbstractController
             // Message de succès
             $this->addFlash('success', 'Article publié avec succès !');
 
-            // TODO: pensez à faire une redirection sur la page d'affichage de l'article
+            //redirection de l'utilisateur vers l'article qu'il vient de créer
+            return $this->redirectToRoute('blog_publication_view', [
+                'slug' => $newArticle->getSlug(),
+            ]);
 
         }
 
@@ -75,10 +78,24 @@ class BlogController extends AbstractController
         // on demande au repository de nous donner tous les articles qui sont en bdd
         $articles = $articleRepo->findAll();
 
-        $articles = [];
-
         return $this->render('blog/publication_list.html.twig', [
             'articles' => $articles,   // on envoi les articles a la vue twg
             ]);
     }
+
+    /**
+     * controleur de la page permettant de voir un article en détail
+     */
+
+    #[Route('/publications/{slug}/', name: 'publication_view')]
+    public function publicationView(Article $article): response
+    {
+
+        dump($article);
+
+        return $this->render('blog/publication_view.html.twig', [
+            'article' => $article,
+        ]);
+    }
+
 }
